@@ -1,10 +1,31 @@
 body {
     box-sizing: border-box;
     text-align: center;
+    background: url(images/forest.jpeg) no-repeat center center fixed;
+    background-size: cover;
 }
 
 input {
     margin-bottom: 72px;
+    height: 18px;
+    border-radius: 5px;
+}
+
+h1, h2, button {
+    font-family: 'VT323', monospace;
+}
+
+button {
+    font-size: 20px;
+    border-radius: 5px;
+}
+
+button:hover {
+    color: yellow;
+    background: blue;
+    transition: ease-in 1s;
+    /* -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: blue; */
 }
 
 h3 {
@@ -29,11 +50,11 @@ h3 {
 }
 
 .pokedexLeft {
-    height: 717px;
+    height: 747px;
 }
 
 .pokedexRight {
-    height: 640px;
+    height: 670px;
     margin-top: 76px;
 }
 
@@ -75,9 +96,9 @@ h3 {
     border-top: transparent;
 }
 
-.pokedexTopRightA {
+/* .pokedexTopRightA {
     left: 1147px;
-    bottom: 390px;
+    bottom: 395px;
     width: 208px;
     height: 105px;
     background: white;
@@ -87,7 +108,7 @@ h3 {
 
 .pokedexTopRightB {
     left: 980px;
-    bottom: 432px;
+    bottom: 437px;
     width: 208px;
     height: 105px;
     background: white;
@@ -95,7 +116,7 @@ h3 {
     border-top: transparent;
     border-right: transparent;
     border-left: transparent;
-}
+} */
 
 /* Blue button */
 
@@ -245,9 +266,9 @@ h3 {
 .blackBtn {
     position: absolute;
     left: 130px;
-    bottom: -70px;
-    height: 45px;
-    width: 45px;
+    bottom: -80px;
+    height: 60px;
+    width: 60px;
     background: rgb(0,26,24);
     border: 3px solid black;
     border-radius: 50%;
@@ -294,17 +315,47 @@ h3 {
     z-index: 2;
 }
 
-/*  */
+.pokeID {
+    position: relative;
+    font-family: 'VT323', monospace;
+    font-size: 80px;
+    bottom: 55px;
+}
+
+.directionalPad {
+    position: absolute;
+    bottom: -20vh;
+    left: 37vw;
+    z-index: 2;
+}
+
+.directionalPadHorizontal, .directionalPadVertical {
+    position: relative;
+    border-radius: 5px;
+    background: black;
+}
+
+.directionalPadVertical {
+    height: 130px;
+    width: 30px;
+    left: 50px;
+}
+
+.directionalPadHorizontal{
+    height: 30px;
+    width: 130px;
+    bottom: -10vh;
+}
 
 /* Right side of Pokedex */
 
 .rightScreenMain {
     position: absolute;
     height: 190px;
-    width: 520px;
+    width: 560px;
     background: rgb(36,36,36);
     border-radius: 5px;
-    left: 800px;
+    left: 770px;
     bottom: 140px;
     border: 5px solid black;
     border-radius: 15px;
