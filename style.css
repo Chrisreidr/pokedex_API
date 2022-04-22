@@ -1,0 +1,308 @@
+body {
+    box-sizing: border-box;
+    text-align: center;
+}
+
+input {
+    margin-bottom: 72px;
+}
+
+h3 {
+    text-align: left;
+    font-family: 'VT323', monospace;
+    margin-left: 10px; 
+}
+
+/* Pokedex frame */
+
+.pokedexLeft, .pokedexMiddle, .pokedexRight {
+    border: 5px solid black;
+    background: rgb(238,0,7);
+    margin-bottom: 10%;
+    border-radius: 5px;
+    width: 40vw;
+    height: 90vh;
+}
+
+.pokedexOrientation {
+    display: flex;
+    justify-content: center;
+}
+
+.pokedexRight {
+    height: 80vh;
+    margin-top: 10vh;
+}
+
+.pokedexMiddle {
+    width: 5vw;
+    border-radius: 5px;
+}
+
+.pokedexTopLeftA, .pokedexTopLeftB, .pokedexTopLeftC, .pokedexTopRightA, .pokedexTopRightB {
+    position: relative;
+    width: 15vw;
+    height: 0.1vh;
+    background: black;
+    border: 5px solid black;
+}
+
+.pokedexTopLeftA {
+    left: 6vw;
+    bottom: 88.25vh;
+    border-top: transparent;
+    border-right: transparent;
+}
+
+.pokedexTopLeftB {
+    left: 20.2vw;
+    bottom: 96.2vh;
+    width: 17vw;
+    transform: rotate(-28deg);
+    border-left: transparent;
+    border-right: transparent;
+    border-top: transparent;
+}
+
+.pokedexTopLeftC {
+    left: 36vw;
+    bottom: 104.2vh;
+    width: 10vw;
+    border-left: transparent;
+    border-top: transparent;
+}
+
+.pokedexTopRightA {
+    left: 100vw;
+    bottom: 90vh;
+    z-index: 2;
+    background: white;
+    border-top: transparent;
+    border-right: transparent;
+}
+
+.pokedexTopRightB {
+    background: white;
+    transform: rotate(28deg);
+    border-top: transparent;
+    border-right: transparent;
+    border-left: transparent;
+}
+
+/* Blue button */
+/*
+.blueBtn, .behindBtn, .btnShineA {
+    position: relative;
+}
+
+.blueBtn {
+    height: 90px;
+    width: 90px;
+    background: rgb(0,104,161);
+    border: 2px solid black;
+    border-radius: 50%;
+    z-index: 2;
+    bottom: 428px;
+    left: 148px;
+}
+
+.behindBtn {
+    height: 100px;
+    width: 100px;
+    background: rgb(219, 225, 251);
+    border: 5px solid black;
+    border-radius: 50%;
+    z-index: 1;
+    bottom: 420px;
+    left: 140px;
+}
+
+.btnShineA {
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    background: rgb(0, 167, 255);
+    z-index: 3;
+    bottom: 468px;
+    left: 160px;
+}
+
+/* Top three buttons */
+
+.threeBtnOrientation {
+    position: relative;
+    left: 280px;
+    bottom: 500px;
+}
+
+.topThreeBtns {
+    display: flex;
+    gap: 25px;
+}
+
+.topBtnA, .topBtnB, .topBtnC {
+    height: 20px;
+    width: 20px;
+    border: 3px solid black;
+    border-radius: 50%;
+}
+
+.topBtnA {
+    background: rgb(250,0,41);
+}
+
+.topBtnB {
+    background: rgb(159,139,0);
+}
+
+.topBtnC {
+    background: rgb(0,115,49);
+}
+
+/* Main screen */
+/*
+.mainScreenBackground, .mainScreen {
+    position: relative;
+}
+
+.mainScreenBackground {
+    height: 320px;
+    width: 470px;
+    border-radius: 5px;
+    background: rgb(222,222,222);
+    border: 5px solid black;
+    border-radius: 15px;
+    z-index: 1;
+    left: 150px;
+    bottom: 10px;
+}
+
+.mainScreen {
+    height: 250px;
+    width: 390px;
+    background: rgb(36,36,36);
+    border-radius: 15px;
+    z-index: 2;
+    left: 195px;
+    top: 490px;
+}
+
+.smallScreenBtnA, .smallScreenBtnB {
+    height: 10px;
+    width: 10px;
+    background: red;
+    border: 3px solid black;
+    border-radius: 50%;
+}
+
+.twoSmallBtns {
+    display: flex;
+    gap: 45px;
+}
+
+.twoSmallBtnsOrientation {
+    position: relative;
+    left: 350px;
+    bottom: 310px;
+    z-index: 2;
+}
+
+.soundLines {
+    position: relative;
+    left: 586px;
+    bottom: 22px;
+    z-index: 2;
+}
+
+.soundLineA, .soundLineB, .soundLineC {
+    height: 5px;
+    width: 30px;
+    background: black;
+    margin-bottom: 3px;
+    border-radius: 5px;
+}
+
+.redBtn {
+    position: relative;
+    left: 166px;
+    bottom: 22px;
+    height: 24px;
+    width: 24px;
+    background: red;
+    border: 3px solid black;
+    border-radius: 50%;
+    z-index: 2;
+}
+
+.blackBtn {
+    position: relative;
+    left: 130px;
+    bottom: -70px;
+    height: 45px;
+    width: 45px;
+    background: rgb(0,26,24);
+    border: 3px solid black;
+    border-radius: 50%;
+    z-index: 2;
+}
+
+.startBtn, .selectBtn {
+    flex-direction: row;
+    height: 5px;
+    width: 80px;
+    border-radius: 5px;
+    border: 3px solid black;
+    z-index: 2;
+}
+
+.startBtn {
+    background: rgb(238,0,7);
+}
+
+.selectBtn {
+    background: rgb(0,62,89);
+}
+
+.startSelectBtnOrientation {
+    display: flex;
+    gap: 50px;
+}
+
+.startSelectBtnPosition {
+    position: relative;
+    left: 268px;
+    bottom: -20px;
+}
+
+.bottomLeftScreen {
+    position: relative;
+    bottom: -145px;
+    left: 275px;
+    height: 100px;
+    width: 200px;
+    background: rgb(4,170,90);
+    border: 5px solid black;
+    border-radius: 15px;
+    z-index: 2;
+}
+
+/* Right side of Pokedex */
+/*
+.rightScreenMain {
+    position: relative;
+    height: 190px;
+    width: 520px;
+    background: rgb(36,36,36);
+    border-radius: 5px;
+    left: 800px;
+    bottom: 140px;
+    border: 5px solid black;
+    border-radius: 15px;
+}
+
+/* Poke data (images, text, content) */
+/*
+.sprite {
+    height: 240px;
+    width: auto;
+}
