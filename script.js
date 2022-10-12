@@ -9,6 +9,13 @@ function getPokemon() {
     const choice = document.querySelector('input').value.toLowerCase();
     console.log(choice);
     const enterName = document.querySelector('.enterName')
+    const msg = new SpeechSynthesisUtterance();
+    const voices = window.speechSynthesis.getVoices();
+    msg.voice = voices[10]; 
+    msg.volume = 1; // From 0 to 1
+    msg.rate = 0.7; // From 0.1 to 10
+    msg.lang = 'en'
+    msg.pitch = 0; // From 0 to 2
 
     fetch(`https://pokeapi.co/api/v2/pokemon/${choice}`)
     .then(res => res.json())
@@ -25,7 +32,8 @@ function getPokemon() {
         img.style.height = '240px';
         img.style.width = 'auto';
         img.style.marginTop = "0";
-
+        msg.text = `${data.name}... a ${data.types.map(x  => x.type.name)} type Pokemon. ID number ${data.id}. Abilities include ${data.abilities.map((x)=> x.ability.name)}`;
+        speechSynthesis.speak(msg);
     })
     .catch(err => {
         console.log(`Error:${err}`);
