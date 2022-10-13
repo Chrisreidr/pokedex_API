@@ -96,28 +96,6 @@ h3 {
     border-top: transparent;
 }
 
-/* .pokedexTopRightA {
-    left: 1147px;
-    bottom: 395px;
-    width: 208px;
-    height: 105px;
-    background: white;
-    border-top: transparent;
-    border-right: transparent;
-}
-
-.pokedexTopRightB {
-    left: 980px;
-    bottom: 437px;
-    width: 208px;
-    height: 105px;
-    background: white;
-    transform: rotate(28deg);
-    border-top: transparent;
-    border-right: transparent;
-    border-left: transparent;
-} */
-
 /* Blue button */
 
 .blueBtn, .behindBtn, .btnShineA {
@@ -207,6 +185,7 @@ h3 {
 }
 
 .mainScreen {
+    position: absolute;
     height: 250px;
     width: 390px;
     background: rgb(36,36,36);
