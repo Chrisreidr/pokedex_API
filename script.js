@@ -13,14 +13,14 @@ function getPokemon() {
     const voices = window.speechSynthesis.getVoices();
     msg.voice = voices[10];
     msg.volume = 1; // From 0 to 1
-    msg.rate = 0.7; // From 0.1 to 10
+    msg.rate = 0.5; // From 0.1 to 10
     msg.lang = 'en'
     msg.pitch = 0; // From 0 to 2
 
     fetch(`https://pokeapi.co/api/v2/pokemon/${choice}`)
         .then(res => res.json())
         .then(data => {
-
+            console.log(data);
             console.log(data.id);
             console.log(img);
             img.src = data.sprites.front_default;
